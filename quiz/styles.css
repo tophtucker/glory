@@ -1,0 +1,40 @@
+body {
+  background: black;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+
+header {
+  margin: 3rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 3rem;
+  font-size: 3em;
+  text-align: center;
+}
+
+.yes,
+.no {
+  font-size: 30vw;
+  line-height: 0.7em;
+  margin: 3rem;
+  text-align: center;
+  animation: blinker 1s step-start infinite;
+}
+
+.yes {
+  color: green;
+}
+
+.no {
+  color: red;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
