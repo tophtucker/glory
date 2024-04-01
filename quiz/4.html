@@ -18,7 +18,7 @@
 <div class="reveal">
 <div class="yes">✓</div>
 <h1>Welcome to Boston Jeff Babbitt!</h1>
-<audio src="shipping-up.m4a"></audio>
+<audio src="shipping-up.m4a" controls></audio>
 </div>
 
 <script src="confetti.browser.min.js"></script>
@@ -31,7 +31,7 @@ function randomInRange(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-reveal.addEventListener("click", e => {
+document.querySelector("button").addEventListener("click", e => {
   e.currentTarget.remove();
   document.querySelector(".reveal").classList.remove("reveal");
   document.querySelector("audio").play();

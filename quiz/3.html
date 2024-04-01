@@ -18,12 +18,12 @@
 <div class="reveal">
 <div class="no">×</div>
 <h1>Wrong. What are you, nuts?</h1>
-<audio src="wrong.mp3"></audio>
+<audio src="wrong.mp3" controls></audio>
 </div>
 
 <script>
 
-reveal.addEventListener("click", e => {
+document.querySelector("button").addEventListener("click", e => {
   e.currentTarget.remove();
   document.querySelector(".reveal").classList.remove("reveal");
   document.querySelector("audio").play();
