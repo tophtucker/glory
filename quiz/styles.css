@@ -54,5 +54,5 @@ button:hover {
 }
 
 .reveal {
-  opacity: 0;
+  display: none;
 }
