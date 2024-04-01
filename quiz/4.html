@@ -13,11 +13,13 @@
   <img src="../logo.png" alt="Boston Glory" />
 </header>
 
+<button id="reveal">Reveal</button>
+
+<div class="reveal">
 <div class="yes">✓</div>
-
 <h1>Welcome to Boston Jeff Babbitt!</h1>
-
-<audio src="shipping-up.mp3" autoplay controls></audio>
+<audio src="shipping-up.m4a"></audio>
+</div>
 
 <script src="confetti.browser.min.js"></script>
 <script>
@@ -29,11 +31,18 @@ function randomInRange(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-var interval = setInterval(function() {
+reveal.addEventListener("click", e => {
+  e.currentTarget.remove();
+  document.querySelector(".reveal").classList.remove("reveal");
+  document.querySelector("audio").play();
+
+  // Trigger confetti
+  var interval = setInterval(function() {
   var particleCount = 50;
   // since particles fall down, start a bit higher than random
   confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } });
   confetti({ ...defaults, particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } });
 }, 250);
+})
 
 </script>

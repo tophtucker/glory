@@ -38,3 +38,12 @@ h1 {
     opacity: 0;
   }
 }
+
+button {
+  margin: 3rem;
+  font-size: 2em;
+}
+
+.reveal {
+  opacity: 0;
+}

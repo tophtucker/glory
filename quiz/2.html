@@ -13,9 +13,20 @@
   <img src="../logo.png" alt="Boston Glory" />
 </header>
 
+<button id="reveal">Reveal</button>
+
+<div class="reveal">
 <div class="no">×</div>
-
 <h1>Wrong. What are you, nuts?</h1>
+<audio src="wrong.mp3"></audio>
+</div>
 
-<audio src="wrong.mp3" autoplay controls></audio>
+<script>
 
+reveal.addEventListener("click", e => {
+  e.currentTarget.remove();
+  document.querySelector(".reveal").classList.remove("reveal");
+  document.querySelector("audio").play();
+})
+
+</script>
